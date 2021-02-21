@@ -1,0 +1,29 @@
+<div style="background:lightseagreen;display: flex;margin: auto; padding: 20px;">
+  <div style="text-align: center;">
+    <img src="../assets/attachment_logo_lyst4516.png" alt="logo" 
+    width="100" height="100" class="logo">
+
+    <div class="app-title">
+      Basic ToDo
+    </div>
+  </div>
+
+  <div class="container">
+    <input class="input-text" type="text" [(ngModel)]="textValue" (keyup.enter)="addTodo()">
+
+    <button class="add-btn" (click)="addTodo()">Add Todo</button>
+
+      <div class="list">
+        <ul>
+          <li *ngFor="let item of list">
+            {{ item.value }}
+            <button class="btn" (click)="dltTodo(item.id)">
+              Delete
+            </button>
+    
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
